@@ -1,0 +1,3 @@
+[submodule "linux"]
+	path = linux
+	url = git@github.com:chyyuu/linux.git
