@@ -3,14 +3,14 @@ CXX = g++
 CPPFLAGS = -std=c++11 -O3 --no-rtti -fPIC -I`llvm-config-5.0 --includedir`
 LDFLAGS = -shared
 
-all: callgraph.so
+all: analysis.so
 
-callgraph.so: callgraph.o
+analysis.so: analysis.o
 	$(CC) $(LDFLAGS) $^ -o $@
 
-callgraph.o: callgraph.cpp
+analysis.o: analysis.cpp
 	$(CXX) $(CPPFLAGS) -c $^ -o $@
 
 .PHONY: clean
 clean:
-	rm callgraph.so callgraph.o
+	rm analysis.so analysis.o

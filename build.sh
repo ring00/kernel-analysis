@@ -21,3 +21,6 @@ cd ..
 
 # Generate allfunctions.txt
 opt -load=callgraph/callgraph.so -callgraph linux.bc
+
+# Analysis with allfunctions.txt
+opt -load=analysis/analysis.so -analysis linux.bc
