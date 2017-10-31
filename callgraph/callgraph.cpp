@@ -23,7 +23,7 @@ public:
     for_each_inst(F, I) {
       if (auto CI = dyn_cast<CallInst>(&I)) {
         Function *called = CI->getCalledFunction();
-        if (called && !called->getName().startswith("llvm")) {
+        if (called && !called->isIntrinsic()) {
           names.insert(called->getName().str());
         }
       }
